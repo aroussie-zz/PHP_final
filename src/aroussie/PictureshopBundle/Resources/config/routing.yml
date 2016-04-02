@@ -1,0 +1,3 @@
+aroussie_pictureshop_homepage:
+    path:     /pictures/index
+    defaults: { _controller: aroussiePictureshopBundle:Pictures:index }

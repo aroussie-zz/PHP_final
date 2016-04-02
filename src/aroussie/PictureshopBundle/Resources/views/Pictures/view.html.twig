@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html style="height: 100%;">
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>See a picture</title>
+
+</head>
+
+<body>
+
+<h2 style="font-weight: bold; text-align: center  ; color: #0066FF;"> See a picture</h2>
+
+<p style="font-family: Arial"> From here you can add an effect on your picture. If you like it, you can download your custom picture from the page
+by doing right click + "save image as" </p>
+
+
+    <div class="col-md-12" style=" margin-bottom: 2%;">
+
+
+        <div class="col-md-8">
+            <img src="{{ asset(picture.webPath) | imagine_filter('my_widen')}}"  />
+        </div>
+
+        <div class="col-md-4">
+            <div class="row col-md-12" style="text-align: center;">
+                <h3>Effects:</h3>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterGrayscale',{'id': picture.id})}}" style="text-align:  center; width: 100%;  ">Grayscale</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterContrast',{'id': picture.id})}}" style="text-align:  center;  width: 100%; ">High contrast</a>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterDarkBrightness',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%; width: 100%;">Dark</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterLightBrightness',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;;width: 100%; ">Light</a>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto; ">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterOrange',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%; width: 100%; ">Orange</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterPurple',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;;width: 100%; ">Purple</a>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterEdgeDetect',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%; width: 100%;">Edge detect</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterEmboss',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%; width: 100%;">Emboss filter</a>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterNegate',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;width: 100%; ">Negate</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterGravure',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;width: 100%; ">Gravure</a>
+                </div>
+            </div>
+
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterRotate',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;width: 100%; ">Rotate</a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_filterMonochrome',{'id': picture.id})}}" style="text-align:  center;margin-top: 8%;width: 100%; ">Monochrome</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-12" >
+
+        <div class="col-md-2">
+            <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_home')}}" style="text-align:center; ">Home</a>
+        </div>
+
+        <div class="col-md-2">
+            <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_delete',{'id': picture.id})}}" style="text-align:  center; ">Delete this picture</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

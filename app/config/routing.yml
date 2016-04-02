@@ -1,0 +1,87 @@
+aroussie_pictureshop:
+    resource: "@aroussiePictureshopBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+_login:
+  path:     /login
+  defaults: { _controller: aroussiePictureshopBundle:Security:login }
+
+_login_check:
+  path:      /login_check
+
+logout:
+    path: /logout
+
+aroussie_pictureshop_home:
+    path:      /
+    defaults:  { _controller: aroussiePictureshopBundle:Pictures:index }
+
+aroussie_pictureshop_view:
+    path:      /pictures/view/{id}
+    defaults:  { _controller: aroussiePictureshopBundle:Pictures:view }
+
+aroussie_pictureshop_add:
+    path:      /pictures/add
+    defaults:  { _controller: aroussiePictureshopBundle:Pictures:add }
+
+aroussie_pictureshop_edit:
+    path:      /pictures/edit/{id}
+    defaults:  { _controller: aroussiePictureshopBundle:Pictures:edit }
+
+aroussie_pictureshop_delete:
+    path:      /pictures/delete/{id}
+    defaults:  { _controller: aroussiePictureshopBundle:Pictures:delete }
+
+aroussie_pictureshop_filterGrayscale:
+    path: /pictures/view/{id}/grayscale
+    defaults:  { _controller: aroussiePictureshopBundle:Filters:grayscale }
+
+aroussie_pictureshop_filterDarkBrightness:
+    path: /pictures/view/{id}/dark_brightness
+    defaults:  { _controller: aroussiePictureshopBundle:Filters:dark }
+
+aroussie_pictureshop_filterLightBrightness:
+     path: /pictures/view/{id}/light_brightness
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:light }
+
+aroussie_pictureshop_filterOrange:
+     path: /pictures/view/{id}/orange_background
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:orange }
+
+aroussie_pictureshop_filterPurple:
+     path: /pictures/view/{id}/purple_background
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:purple }
+
+aroussie_pictureshop_filterContrast:
+     path: /pictures/view/{id}/contrast
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:contrast }
+
+aroussie_pictureshop_filterEdgeDetect:
+     path: /pictures/view/{id}/edge_detect
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:edgeDetect }
+
+aroussie_pictureshop_filterEmboss:
+     path: /pictures/view/{id}/emboss
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:emboss }
+
+aroussie_pictureshop_filterNegate:
+     path: /pictures/view/{id}/negate
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:negate }
+
+aroussie_pictureshop_filterGravure:
+     path: /pictures/view/{id}/gravure
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:gravure }
+
+aroussie_pictureshop_filterRotate:
+     path: /pictures/view/{id}/rotate
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:rotate }
+
+aroussie_pictureshop_filterMonochrome:
+     path: /pictures/view/{id}/monochrome
+     defaults:  { _controller: aroussiePictureshopBundle:Filters:monochrome }
+
+

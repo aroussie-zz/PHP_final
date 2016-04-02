@@ -1,0 +1,4 @@
+services:
+#    aroussie_pictureshop.example:
+#        class: aroussie\PictureshopBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

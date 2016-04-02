@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+
+    <title>Welcome to PictureShop</title>
+
+</head>
+
+<body>
+
+<h1 class="blog-title" style="text-align: center">Welcome to PictureShop</h1>
+
+
+<div class="container">
+    <h1 style="font-weight: bold; text-align: center  ; color: #0066FF;"> My album</h1>
+
+    <div class="col-md-12" style="margin: auto">
+
+        <table class="table table-striped table-hover table-users ">
+            <thead>
+            <tr>
+
+                <th> Name</th>
+                <th> Date</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for picture in listPictures %}
+                <tr>
+                    <td><a href="{{ path('aroussie_pictureshop_view', {'id': picture.id}) }}"> {{ picture.name }} </a></td>
+                    <td> {{ picture.date }}</td>
+                    <td> <img src="{{ asset(picture.webPath) | imagine_filter('miniature')}}"  /></td>
+
+                </tr>
+
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="col-md-12">
+        <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_add')}}" style="text-align:  center; ">Add a picture</a>
+        <a class="btn btn-lg btn-primary" href="{{ path('logout')}}" style="text-align:  center; ">Logout</a>
+
+    </div>
+</div>
+
+</body>
+</html>

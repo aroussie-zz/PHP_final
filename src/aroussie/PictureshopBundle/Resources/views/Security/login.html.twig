@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+
+    <title>Login page</title>
+    </head>
+
+<body>
+{% if error %}
+    <div style="text-align: center;color: red; font-family: Arial;font-size: large;">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+
+<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true" >
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 style="font-weight: bold; color: #0066FF; text-align: center"> Login</h1>
+            </div>
+
+            <div class="modal-body">
+
+                <form class="center-block col-md-12" action="{{ path('_login_check') }}" method="post" >
+
+
+                    <div class="form-group">
+                        <input type="text" class="form-control"id="username" value="{{ last_username }}" name="_username" required >
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" class="form-control" placeholder="Password" name="_password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12" style="text-align: center; ">
+                            <button type="submit" class="btn btn-lg btn-primary" style="background-color: green">Login</button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

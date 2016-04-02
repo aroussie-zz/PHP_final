@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Delete a Picture</title>
+
+</head>
+
+<body>
+
+<h2 style="font-weight: bold; text-align: center  ; color: #0066FF;">Delete a picture</h2>
+
+<h3>Are you sure you want to delete the picture called <strong>{{ picture.name }}</strong> ? </h3>
+
+<div class="container">
+    <div class="col-md-12">
+        <img src="{{ asset(picture.webPath) | imagine_filter('my_widen')}}"  style="margin-bottom: 15px;" />
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-lg btn-primary" href="{{ path('aroussie_pictureshop_view',{'id': picture.id})}}" style="text-align:  center; margin-right: 25px">Go back</a>
+    </div>
+    <div class="col-md-4">
+        <form action="{{ path('aroussie_pictureshop_delete', {'id': picture.id}) }}" method="post">
+            <input type="submit" value="Delete" class="btn btn-danger" >
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

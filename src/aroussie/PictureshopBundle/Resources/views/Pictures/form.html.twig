@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<p style="font-family: Arial; text-align: center  ; color: #0066FF;"> Please set the form to add an image to your album.</p>
+<p  style="font-family: Arial; text-align: center  ; color: #0066FF"> Be aware that you can only upload a jpeg or a png format</p>
+
+        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+        {{ form_errors(form) }}
+
+        <div class="collapse in col-md-12" id="upload-file-panel" aria-expanded="false" >
+            <div class="panel width col-md-12" >
+                <div class="form-group show-border col-md-6" style="text-align: center; margin-left: 25%;">
+
+                    {{ form_errors(form.name) }}
+
+                    {# The input #}
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control' , 'placeholder': 'Name of the Picture'}}) }}
+                </div>
+                <div class="form-group show-border col-md-6" style="margin-left: 37%;" >
+
+                        {{ form_widget(form.file, {'attr': {'class': 'btn btn-default'}})}}
+
+                </div>
+                {{ form_errors(form.file) }}
+
+
+            </div>
+            <div class="form-group show-border" style="text-align: center">
+                {{ form_widget(form.upload, {'attr': {'class': 'btn btn-primary width-full-control'}}) }}
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+</body>
+</html>
